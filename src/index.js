@@ -1,9 +1,10 @@
 import "./styles.scss";
+import logoLemoncode from "./assets/logo.png"
 
-const averageScore = "90";
-const messageToDisplay = `average score ${averageScore}`;
+const logo = document.createElement('img');
 
+logo.src = logoLemoncode;
+logo.alt = "Lemoncode's Logo";
+logo.className = "container__logo";
 
-
-
-document.write(messageToDisplay);
+document.querySelector('.container').appendChild(logo);

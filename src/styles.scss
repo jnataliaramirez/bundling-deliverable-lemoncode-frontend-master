@@ -1,7 +1,11 @@
 $back-color: indianred;
 
-
 .red-background {
-  background-color: indianred;
   background-color: $back-color;
+}
+
+.container {
+  &__logo{
+    width: 50vw;
+  }
 }
