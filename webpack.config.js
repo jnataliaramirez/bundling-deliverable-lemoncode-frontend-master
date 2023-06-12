@@ -1,11 +1,13 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require("path");
 
-
 module.exports = {
   context: path.resolve(__dirname, "./src"),
+  resolve: {
+    extensions: [".js",".ts", ".tsx"],
+  },
   entry: {
-    app: ["./index.js"],
+    app: ["./index.ts"],
   },
   output: {
     filename: '[name].[chunkhash].js',
@@ -14,7 +16,7 @@ module.exports = {
   module:  {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.ts$/,
         exclude: /node_modules/,
         loader: 'babel-loader',
       },
