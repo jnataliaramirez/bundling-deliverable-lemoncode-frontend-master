@@ -10,7 +10,7 @@ module.exports = {
     app: ["./index.tsx"],
   },
   output: {
-    filename: '[name].[chunkhash].js',
+    filename: '[name].js',
     clean: true, 
   },
   module:  {
@@ -19,11 +19,6 @@ module.exports = {
         test: /\.tsx?$/,
         exclude: /node_modules/,
         loader: 'babel-loader',
-      },
-      {
-        test: /\.scss$/,
-        exclude: /node_modules/,
-        use: ["style-loader", "css-loader", "sass-loader"],
       },
       {
         test: /\.(png|jpg|gif|svg)$/,
@@ -38,12 +33,4 @@ module.exports = {
       scriptLoading:'blocking', 
       }),
   ],
-  devtool: 'eval-source-map',
-  devServer: {
-    port: 8081,
-    devMiddleware: {
-      stats: "errors-only",
-    },
-  },
-
 };
