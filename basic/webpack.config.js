@@ -39,10 +39,9 @@ module.exports = {
       }),
   ],
   devServer: {
-    port: 8082,
+    port: 8080,
     devMiddleware: {
       stats: "errors-only",
     },
   },
-
 };
