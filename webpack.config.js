@@ -4,7 +4,7 @@ const path = require("path");
 module.exports = {
   context: path.resolve(__dirname, "./src"),
   resolve: {
-    extensions: [".js",".ts", ".tsx"],
+    extensions: [".js",".ts"],
   },
   entry: {
     app: ["./index.ts"],
@@ -16,7 +16,7 @@ module.exports = {
   module:  {
     rules: [
       {
-        test: /\.ts$/,
+        test: /\.ts/,
         exclude: /node_modules/,
         loader: 'babel-loader',
       },
@@ -40,5 +40,9 @@ module.exports = {
   ],
   devServer: {
     port: 8081,
+    devMiddleware: {
+      stats: "errors-only",
+    },
   },
+
 };
