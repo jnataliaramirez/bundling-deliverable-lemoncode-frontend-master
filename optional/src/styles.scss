@@ -1,0 +1,13 @@
+$title-color: #D65DB1;
+
+.container {
+  &__logo {
+    width: 30vw;
+  }
+}
+
+.header {
+  &__title {
+    color: $title-color;
+  }
+}
