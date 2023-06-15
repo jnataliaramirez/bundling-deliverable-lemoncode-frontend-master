@@ -10,7 +10,7 @@ module.exports = {
     app: ["./index.tsx"],
   },
   output: {
-    filename: '[name].js',
+    filename: '[name].[chunkhash].js',
     clean: true,
   },
   module: {
