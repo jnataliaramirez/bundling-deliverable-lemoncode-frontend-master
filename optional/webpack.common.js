@@ -4,16 +4,16 @@ const path = require("path");
 module.exports = {
   context: path.resolve(__dirname, "./src"),
   resolve: {
-    extensions: [".js",".ts", ".tsx"],
+    extensions: [".js", ".ts", ".tsx"],
   },
   entry: {
     app: ["./index.tsx"],
   },
   output: {
     filename: '[name].js',
-    clean: true, 
+    clean: true,
   },
-  module:  {
+  module: {
     rules: [
       {
         test: /\.tsx?$/,
@@ -28,9 +28,9 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      filename: 'index.html', 
-      template: "./index.html", 
-      scriptLoading:'blocking', 
-      }),
+      filename: 'index.html',
+      template: "./index.html",
+      scriptLoading: 'blocking',
+    }),
   ],
 };

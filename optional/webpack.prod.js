@@ -3,7 +3,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const common = require("./webpack.common.js");
 
 module.exports = merge(common, {
-  mode: "production", 
+  mode: "production",
   output: {
     filename: "js/[name].[chunkhash].js",
     assetModuleFilename: "images/[hash][ext][query]",
