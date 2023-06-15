@@ -1,0 +1,30 @@
+# macOS
+.DS_Store
+
+# Dependencias
+/node_modules
+.cache
+/dist
+
+# Archivos de construcción
+/.cache
+/.parcel-cache
+/.parcel-serve
+/.parcel-source-maps
+
+# Archivos generados
+.DS_Store
+Thumbs.db
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Variables de entorno
+.env
+.env.local
+.env.*.local
+
+# Otros
+.idea
+.vscode
