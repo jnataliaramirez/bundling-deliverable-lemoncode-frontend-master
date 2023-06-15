@@ -8,6 +8,26 @@ module.exports = merge(common, {
     filename: "js/[name].[chunkhash].js",
     assetModuleFilename: "images/[hash][ext][query]",
   },
+  optimization: {
+    runtimeChunk: 'single',
+    splitChunks: {
+      cacheGroups: {
+        vendor: {
+          test: /[\\/]node_modules[\\/]/,
+          chunks: 'all',
+          name: (module) => {
+            const packageName = module.context.match(
+              /[\\/]node_modules[\\/](.*?)([\\/]|$)/
+            )?.[1];
+            return packageName
+              ? `vendor/${packageName.replace("@", "")}`
+              : null;
+          },
+          enforce: true,
+        },
+      },
+    },
+  },
   module: {
     rules: [
       {
